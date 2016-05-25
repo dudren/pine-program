@@ -1,4 +1,4 @@
-def englishNumber number
+def weddingNumber number
   if number < 0  # No negative numbers.
     return 'Please enter a number that isn\'t negative.'
   end
@@ -19,7 +19,7 @@ def englishNumber number
   left = left - write*1000000
 
   if write > 0
-    millions = englishNumber write
+    millions = weddingNumber write
     numString = numString + millions + ' million'
     if left > 0
       numString = numString + ' '
@@ -30,7 +30,7 @@ def englishNumber number
   left = left - write*1000
 
   if write > 0 
-    thousands = englishNumber write
+    thousands = weddingNumber write
     numString = numString + thousands + ' thousand'
     if left > 0
       numString = numString + ' '
@@ -42,7 +42,7 @@ def englishNumber number
 
   if write > 0
     # Now here's a really sly trick:
-    hundreds  = englishNumber write
+    hundreds  = weddingNumber write
     numString = numString + hundreds + ' hundred'  
 
     if left > 0
@@ -76,4 +76,4 @@ def englishNumber number
   numString
 end
 
-puts englishNumber(199999)
+puts weddingNumber(1009009)
